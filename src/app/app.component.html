@@ -1,0 +1,34 @@
+<div *ngIf="orders">
+  <h2>Orders</h2>
+  <ul>
+    <li *ngFor="let order of orders">
+      <div>
+        <strong>Nome:</strong> {{ order.nome }}
+      </div>
+      <div>
+        <strong>Cognome:</strong> {{ order.cognome }}
+      </div>
+      <div>
+        <strong>Data:</strong> {{ order.data }}
+      </div>
+      <div>
+        <strong>Prodotto:</strong> {{ order['prodotto.nome'] }}
+      </div>
+    </li>
+  </ul>
+</div>
+<div *ngIf="!orders">
+  <h2>No orders found. Displaying fake order:</h2>
+  <div>
+    <strong>Nome:</strong> {{ fakeOrder.nome }}
+  </div>
+  <div>
+    <strong>Cognome:</strong> {{ fakeOrder.cognome }}
+  </div>
+  <div>
+    <strong>Data:</strong> {{ fakeOrder.data }}
+  </div>
+  <div>
+    <strong>Prodotto:</strong> {{ fakeOrder['prodotto.nome'] }}
+  </div>
+</div>
